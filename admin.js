@@ -9,6 +9,11 @@ const esc = v => String(v == null ? '' : v)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;').replace(/'/g, '&#039;');
 const uid = p => p + '_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+async function sha256(text) {
+  const bytes = new TextEncoder().encode(text);
+  const digest = await crypto.subtle.digest('SHA-256', bytes);
+  return Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
 
 function loadConfig() {
   try {
@@ -360,6 +365,7 @@ function initAdmin() {
     $('#admin').hidden = true;
     $('#login').hidden = false;
     $('#loginForm').reset();
+    $('#loginToken').placeholder = 'GitHub Token (مرة واحدة فقط)';
   });
 }
 
@@ -376,13 +382,23 @@ async function login(cfg) {
 $('#loginForm').addEventListener('submit', async e => {
   e.preventDefault();
   try {
+    const base = window.STORE_CONFIG || {};
+    const user = $('#loginUser').value.trim();
+    const pass = $('#loginPass').value;
+    const hash = await sha256(pass);
+    if (user !== (base.adminUser || 'admin') || hash !== base.adminPassHash) {
+      throw new Error('اسم المستخدم أو كلمة المرور غير صحيحة');
+    }
+    const saved = loadConfig();
+    const token = $('#loginToken').value.trim() || saved.token;
+    if (!token) throw new Error('أدخل GitHub Token مرة واحدة للمتابعة');
     await login({
-      owner: $('#loginOwner').value.trim(),
-      repo: $('#loginRepo').value.trim(),
-      branch: $('#loginBranch').value.trim() || 'main',
-      dataPath: (window.STORE_CONFIG || {}).dataPath || 'data/db.json',
-      imagesPath: (window.STORE_CONFIG || {}).imagesPath || 'images',
-      token: $('#loginToken').value.trim()
+      owner: base.owner,
+      repo: base.repo,
+      branch: base.branch || 'main',
+      dataPath: base.dataPath || 'data/db.json',
+      imagesPath: base.imagesPath || 'images',
+      token: token
     });
   } catch (err) {
     showMsg(err.message, true);
@@ -390,9 +406,6 @@ $('#loginForm').addEventListener('submit', async e => {
 });
 
 const initial = loadConfig();
-if (initial.owner && initial.repo && initial.token) {
-  $('#loginOwner').value = initial.owner;
-  $('#loginRepo').value = initial.repo;
-  $('#loginBranch').value = initial.branch || 'main';
-  $('#loginToken').value = initial.token;
+if (initial.token) {
+  $('#loginToken').placeholder = 'التوكن محفوظ في هذا المتصفح ✓';
 }
