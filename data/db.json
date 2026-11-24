@@ -1,0 +1,204 @@
+{
+  "settings": {
+    "siteName": "نور للاتصالات",
+    "tagline": "موبايلات وإكسسوارات أصلية بأفضل سعر",
+    "currency": "ج.م",
+    "whatsappDefault": "201000000000",
+    "about": "مجموعة فروع متخصصة في بيع الموبايلات والإكسسوارات الأصلية، مع ضمان وخدمة ما بعد البيع وإمكانية الاستفسار المباشر عبر واتساب."
+  },
+  "categories": [
+    {
+      "id": "phones",
+      "name": "موبايلات",
+      "icon": "📱"
+    },
+    {
+      "id": "accessories",
+      "name": "إكسسوارات",
+      "icon": "🎧"
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "name": "iPhone 15 Pro",
+      "brand": "Apple",
+      "category": "phones",
+      "price": 42999,
+      "oldPrice": 45999,
+      "specs": "شاشة 6.1 بوصة | معالج A17 Pro | 256GB | كاميرا 48MP",
+      "image": "",
+      "badge": "الأكثر مبيعاً",
+      "stock": "متوفر"
+    },
+    {
+      "id": "p2",
+      "name": "Samsung Galaxy S24 Ultra",
+      "brand": "Samsung",
+      "category": "phones",
+      "price": 39950,
+      "oldPrice": 43500,
+      "specs": "شاشة 6.8 بوصة | 256GB | كاميرا 200MP | قلم S Pen",
+      "image": "",
+      "badge": "جديد",
+      "stock": "متوفر"
+    },
+    {
+      "id": "p3",
+      "name": "Xiaomi 14",
+      "brand": "Xiaomi",
+      "category": "phones",
+      "price": 24999,
+      "oldPrice": 26999,
+      "specs": "شاشة 6.36 بوصة | 256GB | كاميرا Leica 50MP | شحن 90W",
+      "image": "",
+      "badge": "",
+      "stock": "متوفر"
+    },
+    {
+      "id": "p4",
+      "name": "OPPO Reno 11",
+      "brand": "OPPO",
+      "category": "phones",
+      "price": 15499,
+      "oldPrice": 16999,
+      "specs": "شاشة 6.7 بوصة | 256GB | كاميرا 50MP | شحن 67W",
+      "image": "",
+      "badge": "",
+      "stock": "متوفر"
+    },
+    {
+      "id": "p5",
+      "name": "Realme 12 Pro",
+      "brand": "Realme",
+      "category": "phones",
+      "price": 12999,
+      "oldPrice": 13999,
+      "specs": "شاشة 6.7 بوصة | 256GB | كاميرا بيريسكوب 50MP",
+      "image": "",
+      "badge": "سعر ممتاز",
+      "stock": "متوفر"
+    },
+    {
+      "id": "p6",
+      "name": "iPhone 13",
+      "brand": "Apple",
+      "category": "phones",
+      "price": 27500,
+      "oldPrice": 31600,
+      "specs": "شاشة 6.1 بوصة | معالج A15 | 128GB | كاميرا مزدوجة",
+      "image": "",
+      "badge": "",
+      "stock": "كمية محدودة"
+    },
+    {
+      "id": "a1",
+      "name": "شاحن سريع 65 واط",
+      "brand": "Anker",
+      "category": "accessories",
+      "price": 399,
+      "oldPrice": 499,
+      "specs": "Type-C | شحن سريع PD 3.0 | حماية حرارية",
+      "image": "",
+      "badge": "",
+      "stock": "متوفر"
+    },
+    {
+      "id": "a2",
+      "name": "سماعات لاسلكية JBL",
+      "brand": "JBL",
+      "category": "accessories",
+      "price": 899,
+      "oldPrice": 1199,
+      "specs": "بلوتوث 5.3 | عزل ضوضاء | بطارية 30 ساعة",
+      "image": "",
+      "badge": "خصم",
+      "stock": "متوفر"
+    },
+    {
+      "id": "a3",
+      "name": "باور بنك 20000 مللي أمبير",
+      "brand": "Xiaomi",
+      "category": "accessories",
+      "price": 749,
+      "oldPrice": 899,
+      "specs": "سعة 20000 | شحن 22.5W | منفذين Type-C + USB",
+      "image": "",
+      "badge": "",
+      "stock": "متوفر"
+    },
+    {
+      "id": "a4",
+      "name": "حامل موبايل للسيارة",
+      "brand": "Generic",
+      "category": "accessories",
+      "price": 129,
+      "oldPrice": 179,
+      "specs": "تثبيت مغناطيسي | دوران 360 درجة | مناسب لجميع الأحجام",
+      "image": "",
+      "badge": "",
+      "stock": "متوفر"
+    }
+  ],
+  "stores": [
+    {
+      "id": "s1",
+      "name": "فرع مدينة نصر",
+      "city": "القاهرة",
+      "address": "شارع عباس العقاد، مدينة نصر، القاهرة",
+      "phone": "01000000001",
+      "whatsapp": "20100000001",
+      "hours": "10 صباحاً - 10 مساءً",
+      "lat": 30.0444,
+      "lng": 31.2357
+    },
+    {
+      "id": "s2",
+      "name": "فرع الجيزة",
+      "city": "الجيزة",
+      "address": "شارع الأهرام، أمام حديقة الحيوان، الجيزة",
+      "phone": "01000000002",
+      "whatsapp": "20100000002",
+      "hours": "11 صباحاً - 11 مساءً",
+      "lat": 30.0131,
+      "lng": 31.2089
+    },
+    {
+      "id": "s3",
+      "name": "فرع الإسكندرية",
+      "city": "الإسكندرية",
+      "address": "شارع النبي دانيال، وسط المدينة، الإسكندرية",
+      "phone": "01000000003",
+      "whatsapp": "20100000003",
+      "hours": "10 صباحاً - 11 مساءً",
+      "lat": 31.2001,
+      "lng": 29.9187
+    }
+  ],
+  "offers": [
+    {
+      "id": "o1",
+      "title": "خصم 15% على iPhone 13",
+      "description": "وفّر 4,100 ج.م مع الضمان الرسمي لفترة محدودة.",
+      "badge": "خصم 15%",
+      "productId": "p6",
+      "active": true
+    },
+    {
+      "id": "o2",
+      "title": "باقة اكسسوارات بـ 999 ج.م",
+      "description": "شاحن 65W + سماعات JBL + باور بنك 20000 في باقة واحدة.",
+      "badge": "عرض باقة",
+      "productId": "a1",
+      "active": true
+    },
+    {
+      "id": "o3",
+      "title": "تقسيط بدون فوائد",
+      "description": "قسّم ثمن Galaxy S24 Ultra على 12 شهراً بدون فوائد.",
+      "badge": "تقسيط",
+      "productId": "p2",
+      "active": true
+    }
+  ]
+}
